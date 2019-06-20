@@ -3,7 +3,8 @@ parameters = {'$\log(q)$','$\zeta_d$','$\zeta_s$','$\nu_f$', ...
     '$\log(-\nu_a)$','$\log(\alpha)$','$\mathrm{logit}(p^J)$', ...
     '$\nu_j$','$ \log(\mu)$','$\eta_1$','$\log(\eta_2)$','$\log(-\eta_3)$','$\log(\eta_4)$'};
 
-fileext = '.png';
+fileext = '.eps';
+fileformat = '-depsc';
 filebeg = ['C:\Users\sirenj5\work\Pr\dimReduc\figures\WR_'];
 reso = '-r300';
 
@@ -17,7 +18,7 @@ pos3 = [2 2 18 8];
 fileends = {'RMSE_all','RMSE_sum'};
 positions = [pos1;pos2];
 
-saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(hs,filebeg,fileends,fileext,positions,fileformat,reso);
 
 %%
 
@@ -26,7 +27,7 @@ saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
 fileends = {'no0_RMSE_all','no0_RMSE_sum'};
 positions = [pos1;pos2];
 
-saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(hs,filebeg,fileends,fileext,positions,fileformat,reso);
 
 %%
 
@@ -40,7 +41,7 @@ apu(end).YLim = [ymin ymax];
 
 fileends = {'all_vs_no0_RMSE_sum'};
 positions = pos3;
-saveFigures(h,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(h,filebeg,fileends,fileext,positions,fileformat,reso);
 
 %%
 
@@ -49,7 +50,7 @@ saveFigures(h,filebeg,fileends,fileext,positions,'-dpng',reso);
 fileends = {'RMSE_allb','RMSE_sumb'};
 positions = [pos1;pos2];
 
-saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(hs,filebeg,fileends,fileext,positions,fileformat,reso);
 
 %%
 
@@ -58,7 +59,7 @@ saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
 fileends = {'no0_RMSE_allb','no0_RMSE_sumb'};
 positions = [pos1;pos2];
 
-saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(hs,filebeg,fileends,fileext,positions,fileformat,reso);
 
 %%
 
@@ -72,7 +73,7 @@ apu(end).YLim = [ymin ymax];
 
 fileends = {'all_vs_no0_RMSE_sumb'};
 positions = pos3;
-saveFigures(h,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(h,filebeg,fileends,fileext,positions,fileformat,reso);
 
 
 %%

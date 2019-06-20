@@ -1,12 +1,14 @@
 reductions = {'Reg', 'localReg', 'localRegopt', 'PLS', 'PLSopt', 'localPLS', 'localPLSopt'};
 parameters = {'log($r$)','$\sigma_e$','$\phi$'};
 
-hs = drawResults({results_reg,results_l500reg ,results_localreg,results_PLS,results_PLSopt,results_l500PLS,results_localPLS},reductions,parameters,{'Parameters'});
+hs = drawResults({results_reg,results_l500reg ,results_localreg,results_PLS,results_PLSopt,results_l500PLS,results_localPLS},reductions,parameters,{''});
 
-fileext = '.png';
+fileext = '.eps';
 fileends = {'RMSE_all','RMSE_av'};
 filebeg = ['C:\Users\sirenj5\work\Pr\dimReduc\figures\ricker_'];
 reso = '-r300';
+fileformat = '-depsc';
+
 positions = [2 2 18 8;2 2 9 8];
 
 % Scale the y-axis of the average RMSE figure to better show the
@@ -17,7 +19,7 @@ hh = get(hs(2),'Children');
 hh.YLim = [0 20];
 
 
-saveFigures(hs,filebeg,fileends,fileext,positions,'-dpng',reso);
+saveFigures(hs,filebeg,fileends,fileext,positions,fileformat,reso);
 
 
 %%

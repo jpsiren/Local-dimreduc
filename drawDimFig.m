@@ -36,7 +36,7 @@ for i = 1:nmeas
     end
     axis(axlims);
     title(titles{i});
-    if i == 1
+    if rem(i,ncol) == 1
         ylabel(ylab,'interpreter','latex')
     end
     xlabel(xlab,'interpreter','latex');
